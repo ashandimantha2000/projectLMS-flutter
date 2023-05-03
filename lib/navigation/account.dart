@@ -8,7 +8,7 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     header1='My Account';
-    header2='Your Data Here';
+    header2='Your Details             ';
     return Header();
   }
 }

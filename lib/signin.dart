@@ -263,7 +263,7 @@ class _LoginPageState extends State<LoginPage> {
                                   child: Material(
                                     borderRadius: BorderRadius.circular(14),
                                     color: Color.fromRGBO(1, 94, 172, 1.0),
-                                    elevation: 7.0,
+                                    //elevation: 7.0,
                                     child: Center(
                                       child: Text(
                                         "Sign In",
@@ -273,7 +273,7 @@ class _LoginPageState extends State<LoginPage> {
                                             fontFamily: 'Raleway',
                                             fontWeight: FontWeight.bold),
                                       ),
-                                    ),
+                                    ),ta
                                   )),
                             ),
                           ],

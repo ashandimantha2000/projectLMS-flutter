@@ -10,10 +10,8 @@ class Home extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Container(
-              child: Image.network(
-                  'https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg',
-              ),
+            child: Image.network(
+                'https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg',
             ),
           )
         ],
