@@ -1,5 +1,6 @@
 //main file
 import 'package:flutter/material.dart';
+import 'signin.dart';
 
 import 'navigation/home.dart';
 import 'navigation/account.dart';
@@ -14,8 +15,9 @@ const secondarygray = Color.fromRGBO(232, 232, 232, 1.0);
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Discoid LMS',
-      home: HomePage(),
+      home: LoginPage(),
     ),
   );
 }
