@@ -1,10 +1,10 @@
 //main file
 import 'package:flutter/material.dart';
 
-import './home.dart';
-import './account.dart';
-import './courses.dart';
-import './notifications.dart';
+import 'navigation/home.dart';
+import 'navigation/account.dart';
+import 'navigation/courses.dart';
+import 'navigation/notifications.dart';
 
 //Colours
 const primary = Color.fromRGBO(1, 94, 172, 1.0);
@@ -35,19 +35,17 @@ class HomePageState extends State<HomePage> {
     {"screen": const Account(), "title": "Account"}
   ];
 
-  void _selectScreen(int index) {
-    setState(() {
-      currentIndex = index;
-    });
-  }
 
+
+  //Navigation
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_screens[currentIndex]["title"]),
-      ),
+      // appBar: AppBar(
+      //   title: Text(_screens[currentIndex]["title"]),
+      //
+      // ),
       backgroundColor: secondarygray,
       bottomNavigationBar: Container(
         //margin: EdgeInsets.all(20),
@@ -58,10 +56,10 @@ class HomePageState extends State<HomePage> {
             BoxShadow(
               color: Colors.black.withOpacity(.15),
               //blurRadius: 30,
-              offset: Offset(0, 20),
+              offset: const Offset(0, 20),
             ),
           ],
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               bottomLeft: Radius.zero,
               bottomRight: Radius.zero,
               topLeft: Radius.circular(20),
@@ -85,7 +83,7 @@ class HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AnimatedContainer(
-                  duration: Duration(milliseconds: 1500),
+                  duration: const Duration(milliseconds: 1500),
                   curve: Curves.fastLinearToSlowEaseIn,
                   margin: EdgeInsets.only(
                     bottom: index == currentIndex ? 0 : size.width * .029,
@@ -94,7 +92,7 @@ class HomePageState extends State<HomePage> {
                   ),
                   width: size.width * .128,
                   height: index == currentIndex ? size.width * .014 : 0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: primary,
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(10),
@@ -105,8 +103,8 @@ class HomePageState extends State<HomePage> {
                   listOfIcons[index],
                   size: size.width * .076,
                   color: index == currentIndex
-                      ? Color.fromRGBO(1, 94, 172, 1.0)
-                      : Color.fromRGBO(157, 157, 157, 1.0),
+                      ? const Color.fromRGBO(1, 94, 172, 1.0)
+                      : const Color.fromRGBO(157, 157, 157, 1.0),
                 ),
                 SizedBox(height: size.width * .03),
               ],
@@ -120,8 +118,8 @@ class HomePageState extends State<HomePage> {
 
   List<IconData> listOfIcons = [
     Icons.home_rounded,
-    Icons.favorite_rounded,
-    Icons.settings_rounded,
+    Icons.menu_book_rounded,
+    Icons.message_rounded,
     Icons.person_rounded,
   ];
 }

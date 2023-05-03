@@ -1,14 +1,15 @@
-// screen_b.dart
+// screen_a.dart
 import 'package:flutter/material.dart';
+import 'package:project_lms/main.dart';
 
-class Account extends StatelessWidget {
-  const Account({Key? key}) : super(key: key);
+class Courses extends StatelessWidget {
+  const Courses({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'Account',
+        'Courses',
         style: TextStyle(fontSize: 30),
       ),
     );
