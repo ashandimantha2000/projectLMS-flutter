@@ -8,7 +8,7 @@ class Notifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     header1='Notifications';
-    header2='See your Updates';
+    header2='Your Updates             ';
     return Header();
   }
 }

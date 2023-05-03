@@ -8,7 +8,7 @@ class Courses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     header1='My Courses';
-    header2='Time to Learn';
+    header2='Time to Learn           ';
     return Header();
   }
 }

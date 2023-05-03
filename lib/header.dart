@@ -11,13 +11,7 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
-  final _formfield = GlobalKey<FormState>();
-  final emailController = TextEditingController();
-  final nameController = TextEditingController();
-  final passController = TextEditingController();
-  bool passToggle = true;
-  final repassController = TextEditingController();
-  bool repassToggle = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +20,13 @@ class _HeaderState extends State<Header> {
       body: Container(
         width: double.infinity,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          //crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Padding(
-              padding: EdgeInsets.all(25),
+              padding: const EdgeInsets.all(25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -41,9 +35,8 @@ class _HeaderState extends State<Header> {
                     children: [
                       Column(
                         children: [
-                          Text(
-                            "$header1",
-                            style: TextStyle(
+                          Text('$header1',
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 32,
                               fontFamily: 'Raleway',
@@ -51,11 +44,12 @@ class _HeaderState extends State<Header> {
                             ),
                           ),
                           SizedBox(
-                            height: 2,
+                            height: 5,
                           ),
                           Text(
                             "$header2",
-                            style: TextStyle(
+                            textAlign: TextAlign.left,
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Raleway',
                                 fontSize: 20),
@@ -71,19 +65,19 @@ class _HeaderState extends State<Header> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color.fromRGBO(245, 245, 245, 0.9),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30))),
                 child: SingleChildScrollView(
                   child: Padding(
-                    padding: EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(30),
                     child: Container(
-                      key: _formfield,
+
 
                     ),
                   ),
