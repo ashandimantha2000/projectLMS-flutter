@@ -1,29 +1,14 @@
 // not added
 import 'package:flutter/material.dart';
-import 'package:project_lms/main.dart';
+import 'package:project_lms/header.dart';
 
 class Notifications extends StatelessWidget {
   const Notifications({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: primary,
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(40),
-            child: Text(
-              'Notification',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 35,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+    header1='Notifications';
+    header2='See your Updates';
+    return Header();
   }
 }
