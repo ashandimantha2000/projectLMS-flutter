@@ -2,6 +2,10 @@
 import 'package:flutter/material.dart';
 import 'nav.dart';
 import 'signin.dart';
+import 'navigation/home.dart';
+import 'navigation/notifications.dart';
+import 'navigation/courses.dart';
+import 'navigation/my_courses.dart';
 
 //Colours
 const primary = Color.fromRGBO(1, 94, 172, 1.0);
@@ -13,7 +17,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Discoid LMS',
-      home: LoginPage(),
+      home: HomePage(),
       //
     ),
   );
