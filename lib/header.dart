@@ -75,10 +75,22 @@ class _HeaderState extends State<Header> {
                         topRight: Radius.circular(30))),
                 child: SingleChildScrollView(
                   child: Padding(
-                    padding: const EdgeInsets.all(30),
-                    child: Container(
-
-
+                    padding: const EdgeInsets.all(15),
+                    child:  TextField(
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'Raleway'
+                      ),
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white12,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(50.0),
+                        ),
+                        hintText: "Search",
+                        suffixIcon: Icon(Icons.search),
+                        suffixIconColor: Color.fromRGBO(87, 100, 241, 1.0),
+                      ),
                     ),
                   ),
                 ),
