@@ -3,7 +3,9 @@ import 'navigation/home.dart';
 import 'navigation/account.dart';
 import 'navigation/courses.dart';
 import 'navigation/notifications.dart';
+import 'navigation/my_courses.dart';
 import 'main.dart';
+
 
 
 class HomePage extends StatefulWidget {
@@ -15,7 +17,7 @@ class HomePageState extends State<HomePage> {
   var currentIndex = 0;
   final List _screens = [
     {"screen": const Home(), "title": "Home"},
-    {"screen": const Courses(), "title": "Courses"},
+    {"screen": const MyCoursesPage(), "title": "Courses"},
     {"screen": const Notifications(), "title": "Notifications"},
     {"screen": const Account(), "title": "Account"}
   ];
