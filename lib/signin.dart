@@ -1,5 +1,14 @@
+import 'dart:convert';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:project_lms/fragments/dashboard_of_fragments.dart';
+import 'package:project_lms/model/student.dart';
+import 'package:project_lms/userPreferences/student_preferences.dart';
 import 'navigation/forgot_psw.dart';
+//for backend
+import 'package:http/http.dart' as http;
+import 'api_connector/api_connection.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -10,9 +19,62 @@ class _LoginPageState extends State<LoginPage> {
   final _formfield = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
   bool passToggle = true;
 
   bool isChecked = false;
+
+  //for the backend
+  signinUserNow() async
+  {
+    try
+    {
+      var res = await http.post(
+          Uri.parse(API.signIn),
+          body: {
+            "std_email":emailController.text,
+            "std_password":passController.text,
+          }
+      );
+
+      print(res.statusCode );
+      if(res.statusCode==200)
+
+      {
+        //var resBodyofLogin = jsonDecode(res.body);
+        print(res.body);
+        var resBodyofLogin= await json.decode(json.encode(res.body));
+        print(resBodyofLogin);
+            if(resBodyofLogin['success']==true)
+        {
+          Fluttertoast.showToast(msg: "You're Logged-In Successfully");
+          Student studentInfo = Student.fromJson(resBodyofLogin["userData"]);
+          //save user info to local storage using shared references
+          await RememberStudentPreferences.saveRememberUser(studentInfo);
+
+          Future.delayed(Duration(milliseconds: 1000),()
+          {
+            Get.to(DashboardOfFragments());
+          });
+
+
+          Get.to(DashboardOfFragments());
+
+        }
+        else
+        {
+          Fluttertoast.showToast(msg: "Error: Incorrect username or password.\nPlease try again.");
+        }
+      }
+    }
+    catch(errorMsg)
+    {
+      print("Error :: "+errorMsg.toString());
+
+    }
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                     "Welcome Back",
                     style: TextStyle(
                       color: Color.fromRGBO(1, 94, 172, 1.0),
-                      fontSize: 32,
+                      fontSize: 30,
                       fontFamily: 'Raleway',
                       fontWeight: FontWeight.bold,
                     ),
@@ -54,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: 2,
                   ),
                   Text(
-                    "Enter your details below to Log in",
+                    "To the Discoid LMS",
                     style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Poppins',
@@ -71,7 +133,9 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30))),
+                        topRight: Radius.circular(30)
+                    )
+                ),
                 child: SingleChildScrollView(
                   child: Padding(
                     padding: EdgeInsets.all(30),
@@ -80,14 +144,14 @@ class _LoginPageState extends State<LoginPage> {
                         child: Column(
                           children: <Widget>[
                             SizedBox(
-                              height: 10,
+                              height: 7,
                             ),
                             Center(
                                 child: Text(
                                   "Sign In",
                                   style: TextStyle(
                                     color: Color.fromRGBO(1, 94, 172, 1.0),
-                                    fontSize: 45,
+                                    fontSize: 38,
                                     fontFamily: 'Raleway',
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -105,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 )),
                             SizedBox(
-                              height: 50,
+                              height: 30,
                             ),
 
                             Container(
@@ -115,8 +179,9 @@ class _LoginPageState extends State<LoginPage> {
                                   boxShadow: [
                                     BoxShadow(
                                         color: Color.fromRGBO(1, 94, 172, 1.0),
-                                        blurRadius: 50,
-                                        offset: Offset(0, 10))
+                                        blurRadius: 20,
+                                        offset: Offset(0, 1),
+                                    )
                                   ]),
                               child: Column(
                                 children: <Widget>[],
@@ -130,12 +195,14 @@ class _LoginPageState extends State<LoginPage> {
                                 decoration: InputDecoration(
                                     labelText: "Email Address",
                                     labelStyle: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 17,
                                       fontFamily: 'Raleway',
                                     ),
                                     border: OutlineInputBorder(
                                         borderRadius:
-                                        BorderRadius.circular(14))),
+                                        BorderRadius.circular(14),
+                                    ),
+                                ),
                                 validator: (value) {
                                   bool emailValid = RegExp(
                                       r"^[zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_'{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
@@ -162,7 +229,7 @@ class _LoginPageState extends State<LoginPage> {
                                       vertical: 20.0, horizontal: 15),
                                   labelText: "Password",
                                   labelStyle: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 17,
                                     fontFamily: 'Raleway',
                                   ),
                                   border: OutlineInputBorder(
@@ -250,7 +317,7 @@ class _LoginPageState extends State<LoginPage> {
 
                             //-->Sign in btn
                             SizedBox(
-                              height: 50,
+                              height: 34,
                             ),
                             InkWell(
                               onTap: () {
@@ -258,10 +325,17 @@ class _LoginPageState extends State<LoginPage> {
                                   emailController.clear();
                                   passController.clear();
                                 }
+                                // if(_formfield.currentState!.validate())
+                                //   {
+                                //     print("It works");
+                                //     signinUserNow();
+                                //   }
+                                print(" Yes, It works");
+                                signinUserNow();
                               },
                               child: Container(
                                   height: 50,
-                                  width: 300,
+                                  width: 330,
                                   child: Material(
                                     borderRadius: BorderRadius.circular(14),
                                     color: Color.fromRGBO(1, 94, 172, 1.0),
@@ -271,7 +345,7 @@ class _LoginPageState extends State<LoginPage> {
                                         "Sign In",
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 24,
+                                            fontSize: 23,
                                             fontFamily: 'Raleway',
                                             fontWeight: FontWeight.bold),
                                       ),
