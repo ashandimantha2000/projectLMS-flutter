@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 import 'nav.dart';
 import 'signin.dart';
 import 'package:project_lms/api_connector/signin_api.dart';
+import 'navigation/home.dart';
+import 'navigation/notifications.dart';
+import 'navigation/courses.dart';
+import 'navigation/my_courses.dart';
 
 //hardcode
 var myusername = 'Ashan';
 var mypassword = '1234';
+
 
 
 
@@ -25,8 +30,10 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Discoid LMS',
-      home: LoginPage(),
+
+      home: HomePage(),
       //HomePage or LoginPage
+
     ),
   );
 }

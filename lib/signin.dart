@@ -269,12 +269,14 @@ class _LoginPageState extends State<LoginPage> {
                                             color: Color.fromRGBO(1, 94, 172, 1.0),
                                           ),
 
+
                                           value: isChecked,
                                           onChanged: (value) {
                                             setState(() {
                                               isChecked = value!;
                                             });
                                           },
+
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(5.0),
 
