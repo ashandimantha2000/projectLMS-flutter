@@ -6,6 +6,7 @@ import 'navigation/home.dart';
 import 'navigation/notifications.dart';
 import 'navigation/courses.dart';
 import 'navigation/my_courses.dart';
+import 'package:project_lms/My_Courses/Module_inside.dart';
 
 //Colours
 const primary = Color.fromRGBO(1, 94, 172, 1.0);
