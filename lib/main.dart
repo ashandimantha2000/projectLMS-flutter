@@ -7,6 +7,7 @@ import 'navigation/home.dart';
 import 'navigation/notifications.dart';
 import 'navigation/courses.dart';
 import 'navigation/my_courses.dart';
+import 'package:project_lms/My_Courses/Module_inside.dart';
 
 //hardcode
 var myusername = 'Ashan';
