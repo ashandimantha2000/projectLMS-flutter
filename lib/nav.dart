@@ -19,7 +19,7 @@ class HomePageState extends State<HomePage> {
     {"screen": const Home(), "title": "Home"},
     {"screen": const MyCoursesPage(), "title": "Courses"},
     {"screen": const Notifications(), "title": "Notifications"},
-    {"screen": const Account(), "title": "Account"}
+    {"screen": Account(), "title": "Account"}
   ];
 
 
