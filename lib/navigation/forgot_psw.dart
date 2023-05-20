@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_lms/signin.dart';
 
-
 class ForgotPswPage extends StatefulWidget {
   @override
   _ForgotPswPageState createState() => _ForgotPswPageState();
@@ -32,14 +31,14 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                 children: <Widget>[
                   Center(
                       child: Text(
-                        "Let's Reset",
-                        style: TextStyle(
-                          color: Color.fromRGBO(1, 94, 172, 1.0),
-                          fontSize: 32,
-                          fontFamily: 'Raleway',
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
+                    "Let's Reset",
+                    style: TextStyle(
+                      color: Color.fromRGBO(1, 94, 172, 1.0),
+                      fontSize: 32,
+                      fontFamily: 'Raleway',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )),
                   SizedBox(
                     height: 2,
                   ),
@@ -88,8 +87,6 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                                 children: <Widget>[],
                               ),
                             ),
-
-                            //-->Name or Email text field
                             TextFormField(
                                 keyboardType: TextInputType.emailAddress,
                                 controller: emailController,
@@ -101,10 +98,10 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                                     ),
                                     border: OutlineInputBorder(
                                         borderRadius:
-                                        BorderRadius.circular(11))),
+                                            BorderRadius.circular(11))),
                                 validator: (value) {
                                   bool emailValid = RegExp(
-                                      r"^[zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_'{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                          r"^[zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_'{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                       .hasMatch(value!);
 
                                   if (value!.isEmpty) {
@@ -113,12 +110,9 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                                     return "Enter Valid Email";
                                   }
                                 }),
-
                             SizedBox(
                               height: 30,
                             ),
-
-                            //-->Password text field
                             TextFormField(
                                 keyboardType: TextInputType.number,
                                 controller: numController,
@@ -130,14 +124,12 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                                     ),
                                     border: OutlineInputBorder(
                                         borderRadius:
-                                        BorderRadius.circular(11))),
+                                            BorderRadius.circular(11))),
                                 validator: (value) {
                                   if (value!.isEmpty) {
                                     return "Enter the Code";
                                   }
                                 }),
-
-                            //-->Sign in btn
                             SizedBox(
                               height: 40,
                             ),
@@ -167,7 +159,6 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                                     ),
                                   )),
                             ),
-
                             SizedBox(
                               height: 40,
                             ),
@@ -179,7 +170,6 @@ class _ForgotPswPageState extends State<ForgotPswPage> {
                                 fontFamily: 'Raleway',
                               ),
                             ),
-
                             SizedBox(
                               height: 3,
                             ),

@@ -8,6 +8,8 @@ import 'navigation/notifications.dart';
 import 'navigation/courses.dart';
 import 'navigation/my_courses.dart';
 import 'package:project_lms/My_Courses/Module_inside.dart';
+import 'package:project_lms/Lecturer/lecturer.dart';
+import 'package:project_lms/My_Courses/results.dart';
 
 //hardcode
 var myusername = 'Ashan';
@@ -44,6 +46,6 @@ class HomeMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return Results();
   }
 }

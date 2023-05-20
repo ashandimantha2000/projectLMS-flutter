@@ -6,6 +6,8 @@ import 'package:project_lms/Home_Screens/Time_table.dart';
 import 'package:project_lms/Home_Screens/email.dart';
 import 'package:project_lms/Home_Screens/Library.dart';
 
+import '../Home_Screens/edit.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -358,7 +360,13 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Edit()),
+                                  );
+                                },
                                 style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
