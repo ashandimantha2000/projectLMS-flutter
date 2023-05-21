@@ -8,7 +8,7 @@ class MyTimetable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Time table here...'),
+      body: Text('Time table'),
     );
 
   }
