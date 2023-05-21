@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:project_lms/main.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class First_Module extends StatelessWidget {
-  const First_Module({Key? key}) : super(key: key);
+
+
+  class First_Module extends StatefulWidget {
+  @override
+  _First_ModuleState createState() => _First_ModuleState();
+  }
+
+
+class _First_ModuleState extends State<First_Module> {
 
   @override
   Widget build(BuildContext context) {

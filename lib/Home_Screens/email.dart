@@ -8,7 +8,12 @@ class Email extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('mails here...'),
+      body: Center(
+        child: Text(
+          'Email here...',
+          textAlign: TextAlign.center,
+        ),
+      )
     );
 
   }

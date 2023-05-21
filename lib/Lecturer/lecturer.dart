@@ -1,17 +1,9 @@
 // screen_b.dart
 import 'package:flutter/material.dart';
-import 'package:project_lms/header.dart';
-
-import '../My_Courses/results.dart';
 
 
-class Account extends StatefulWidget {
-  @override
-  _AccountPageState createState() => _AccountPageState();
-}
-
-
-class _AccountPageState extends State<Account> {
+class Lecturer extends StatelessWidget {
+  const Lecturer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -133,7 +125,7 @@ class _AccountPageState extends State<Account> {
               children: [
                 CircleAvatar(
                   backgroundImage:
-                      AssetImage('assets/images/programmer (1).png'),
+                  AssetImage('assets/images/lecturer.png'),
                   radius: 40,
                 ),
                 SizedBox(
@@ -143,15 +135,16 @@ class _AccountPageState extends State<Account> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "John Nell",
+                      "Emma Charlotte",
                       textAlign: TextAlign.left,
                       style: TextStyle(
+                        decoration: TextDecoration.underline,
                           fontSize: 25,
                           fontFamily: 'Raleway',
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "PLY 282023112",
+                      "PLY 19670093",
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontSize: 16,
@@ -163,7 +156,7 @@ class _AccountPageState extends State<Account> {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 50,
             ),
             Row(
               children: [
@@ -171,7 +164,7 @@ class _AccountPageState extends State<Account> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Name:          ",
+                      "Name:    ",
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: 'Poppins',
@@ -181,7 +174,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "Batch:          ",
+                      "Position:    ",
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: 'Poppins',
@@ -191,7 +184,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "Degree:          \n",
+                      "Qualifications:    \n",
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: 'Poppins',
@@ -201,7 +194,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "Faculty:          ",
+                      "Email:    ",
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: 'Poppins',
@@ -211,17 +204,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "Email:          ",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "Contact:          ",
+                      "Contact:    ",
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: 'Poppins',
@@ -236,7 +219,7 @@ class _AccountPageState extends State<Account> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "John Nell Dias",
+                      "Emma Charlotte",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'Poppins',
@@ -246,7 +229,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "21.1",
+                      "Senior Lecturer",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'Poppins',
@@ -256,7 +239,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "BSc(hons) Bussiness \nManagement",
+                      "Phd(Reading),MBA,BSc(Hons)\nSoftware Engineering",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'Poppins',
@@ -266,7 +249,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "Faculty of Bussiness",
+                      "dfs@plymouth.ac.uk",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'Poppins',
@@ -276,17 +259,7 @@ class _AccountPageState extends State<Account> {
                       height: 20,
                     ),
                     Text(
-                      "hsn@students.plymouth.ac.uk",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "(+94)778982732",
+                      "(+94)712345670",
                       style: TextStyle(
                         fontSize: 16,
                         fontFamily: 'Poppins',
@@ -302,33 +275,7 @@ class _AccountPageState extends State<Account> {
             SizedBox(
               height: 30,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Results()),
-                );
-              },
-              child: Container(
-                  height: 40,
-                  width: 100,
-                  child: Material(
-                    borderRadius: BorderRadius.circular(14),
-                    color: Color.fromRGBO(1, 94, 172, 1.0),
-                    //elevation: 7.0,
-                    child: Center(
-                      child: Text(
-                        "View Results",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Raleway',
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  )),
-            ),
+
           ],
         ),
       ),
