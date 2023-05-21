@@ -30,20 +30,20 @@ class _LoginPageState extends State<LoginPage> {
     try
     {
       var res = await http.post(
-          Uri.parse(API.signIn),
+          Uri.parse('http://192.168.8.100/api_lms/student/signin.php'),
           body: {
             "std_email":emailController.text,
             "std_password":passController.text,
           }
       );
 
-      print(res.statusCode );
+      print(res.statusCode);
       if(res.statusCode==200)
 
       {
-        //var resBodyofLogin = jsonDecode(res.body);
+       var resBodyofLogin = jsonDecode(res.body);
         print(res.body);
-        var resBodyofLogin= await json.decode(json.encode(res.body));
+        //var resBodyofLogin= await json.decode(json.encode(res.body));
         print(resBodyofLogin);
             if(resBodyofLogin['success']==true)
         {
@@ -325,11 +325,11 @@ class _LoginPageState extends State<LoginPage> {
                                   emailController.clear();
                                   passController.clear();
                                 }
-                                // if(_formfield.currentState!.validate())
-                                //   {
-                                //     print("It works");
-                                //     signinUserNow();
-                                //   }
+                                if(_formfield.currentState!.validate())
+                                  {
+                                    print("It works");
+                                    signinUserNow();
+                                  }
                                 print(" Yes, It works");
                                 signinUserNow();
                               },
