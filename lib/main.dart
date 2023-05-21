@@ -11,13 +11,6 @@ import 'package:project_lms/My_Courses/Module_inside.dart';
 import 'package:project_lms/Lecturer/lecturer.dart';
 import 'package:project_lms/My_Courses/results.dart';
 
-//hardcode
-// var myusername = 'Ashan';
-// var mypassword = '1234';
-
-
-
-
 
 //Colours
 const primary = Color.fromRGBO(1, 94, 172, 1.0);
