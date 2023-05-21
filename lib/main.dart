@@ -1,6 +1,5 @@
 //main file
 import 'package:flutter/material.dart';
-import 'package:project_lms/testSign.dart';
 import 'nav.dart';
 import 'signin.dart';
 import 'package:project_lms/api_connector/signin_api.dart';
@@ -11,13 +10,6 @@ import 'navigation/my_courses.dart';
 import 'package:project_lms/My_Courses/Module_inside.dart';
 import 'package:project_lms/Lecturer/lecturer.dart';
 import 'package:project_lms/My_Courses/results.dart';
-
-//hardcode
-// var myusername = 'Ashan';
-// var mypassword = '1234';
-
-
-
 
 
 //Colours
