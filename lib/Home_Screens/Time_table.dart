@@ -9,8 +9,6 @@ class _MyTimetableState extends State<MyTimetable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
- ashan
-      body: Text('Time table'),
 
       backgroundColor: Color.fromRGBO(1, 94, 172, 1.0),
       body: SafeArea(
