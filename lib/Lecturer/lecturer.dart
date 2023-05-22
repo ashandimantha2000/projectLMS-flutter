@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class Lecturer extends StatelessWidget {
   const Lecturer({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +50,7 @@ class Lecturer extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "Your ",
+                          "Staff ",
                           textAlign: TextAlign.left,
                           style: const TextStyle(
                               color: Colors.white,
@@ -152,7 +153,8 @@ class Lecturer extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+
               ],
             ),
             SizedBox(

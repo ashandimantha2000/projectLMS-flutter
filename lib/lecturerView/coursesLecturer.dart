@@ -144,7 +144,7 @@ class MyCoursesPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 18,
                         ),
                         Row(
                           children: [
