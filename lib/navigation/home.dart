@@ -35,10 +35,10 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
                   Container(
-                    height: 40,
+                    height: 50,
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(50),
@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 1),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -173,8 +173,17 @@ class Home extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
                                     children: [
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Container(
+                                        child: Image.asset(
+                                          "assets/images/map.png",
+                                          height: 70,
+                                        ),
+                                      ),
                                       Text(
-                                        "",
+                                        "Map",
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 24,
