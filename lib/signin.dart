@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_lms/fragments/dashboard_of_fragments.dart';
 import 'package:project_lms/model/student.dart';
+import 'package:project_lms/nav.dart';
 import 'package:project_lms/userPreferences/student_preferences.dart';
 import 'navigation/forgot_psw.dart';
 //for backend
@@ -30,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
     try
     {
       var res = await http.post(
-          Uri.parse('http://192.168.8.100/api_lms/student/signin.php'),
+          Uri.parse('http://192.168.8.102/api_lms/student/signin.php'),
           body: {
             "std_email":emailController.text,
             "std_password":passController.text,
@@ -72,6 +73,30 @@ class _LoginPageState extends State<LoginPage> {
       print("Error :: "+errorMsg.toString());
 
     }
+  }
+
+
+  signInNew()
+  {
+    dynamic userEmail=emailController.text;
+    dynamic userPass =passController.text;
+
+    if(userEmail=='admin@plymouth.uk' && userPass=='admin@Plymouth123')
+      {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      }
+    else
+      {
+        Fluttertoast.showToast(msg: "Error: Incorrect username or pa"
+            "ssword.\nPlease try again.");
+
+      }
+
+
+
   }
 
 
@@ -213,6 +238,7 @@ class _LoginPageState extends State<LoginPage> {
                                   } else if (!emailValid) {
                                     return "Enter Valid Email";
                                   }
+
                                 }),
 
                             SizedBox(
@@ -250,6 +276,7 @@ class _LoginPageState extends State<LoginPage> {
                                 } else if (passController.text.length < 6) {
                                   return "Password length should be more than 6 characters";
                                 }
+
                               },
                             ),
 
@@ -321,17 +348,16 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             InkWell(
                               onTap: () {
-                                if (_formfield.currentState!.validate()) {
-                                  emailController.clear();
-                                  passController.clear();
-                                }
+
                                 if(_formfield.currentState!.validate())
                                   {
                                     print("It works");
-                                    signinUserNow();
+                                    //signinUserNow();
+                                    signInNew();
                                   }
                                 print(" Yes, It works");
-                                signinUserNow();
+                               //signinUserNow();
+                                signInNew();
                               },
                               child: Container(
                                   height: 50,
