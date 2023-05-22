@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'navigation/home.dart';
-import 'navigation/account.dart';
-import 'navigation/courses.dart';
-import 'navigation/notifications.dart';
-import 'navigation/my_courses.dart';
-import 'main.dart';
-import 'signin.dart';
+import 'package:project_lms/lecturerView/homeLecturer.dart';
+import 'package:project_lms/Lecturer/lecturer.dart';
+import 'package:project_lms/navigation/courses.dart';
+import 'package:project_lms/navigation/notifications.dart';
+import 'package:project_lms/lecturerView/coursesLecturer.dart';
+import 'package:project_lms/main.dart';
+import 'package:project_lms/signin.dart';
 
 
 
-class HomePage extends StatefulWidget {
+class LecHomePage extends StatefulWidget {
   @override
-  HomePageState createState() => HomePageState();
+  LecHomePageState createState() => LecHomePageState();
 }
 
 
 
-class HomePageState extends State<HomePage> {
+class LecHomePageState extends State<LecHomePage> {
   var currentIndex = 0;
   final List _screens = [
-    {"screen": const Home(), "title": "Home"},
+    {"screen": const LecturerHome(), "title": "Home"},
     {"screen": const MyCoursesPage(), "title": "Courses"},
     {"screen": const Notifications(), "title": "Notifications"},
-    {"screen": Account(), "title": "Account"}
+    {"screen": Lecturer(), "title": "Account"}
   ];
 
 

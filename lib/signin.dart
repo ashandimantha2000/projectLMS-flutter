@@ -8,6 +8,7 @@ import 'package:project_lms/model/student.dart';
 import 'package:project_lms/nav.dart';
 import 'package:project_lms/navigation/courses.dart';
 import 'package:project_lms/userPreferences/student_preferences.dart';
+import 'lecturerView/navLecturer.dart';
 import 'navigation/forgot_psw.dart';
 //for backend
 import 'package:http/http.dart' as http;
@@ -95,19 +96,19 @@ class _LoginPageState extends State<LoginPage> {
     if(userEmail=='admin@plymouth.uk' && userPass=='admin@Plymouth123')
     {
       if(selectedValue=='Student')
-        {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => HomePage()),
-          );
-        }
+      {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      }
       else if(selectedValue=='Staff')
-        {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MyCoursesPage()),
-          );
-        }
+      {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LecHomePage()),
+        );
+      }
     }
     else
     {
