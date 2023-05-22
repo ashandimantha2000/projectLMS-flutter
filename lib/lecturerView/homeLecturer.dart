@@ -8,8 +8,8 @@ import 'package:project_lms/Home_Screens/Library.dart';
 
 import '../Home_Screens/edit.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class LecturerHome extends StatelessWidget {
+  const LecturerHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

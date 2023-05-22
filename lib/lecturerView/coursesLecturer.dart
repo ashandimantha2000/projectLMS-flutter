@@ -47,7 +47,7 @@ class MyCoursesPage extends StatelessWidget {
                                 fontSize: 20),
                           ),
                           Text(
-                            "Learn",
+                            "Teach",
                             textAlign: TextAlign.left,
                             style: const TextStyle(
                                 color: Colors.white,
@@ -90,7 +90,7 @@ class MyCoursesPage extends StatelessWidget {
                           ),
                           child: Padding(
                             padding:
-                                EdgeInsets.only(left: 40, top: 5, bottom: 5),
+                            EdgeInsets.only(left: 40, top: 5, bottom: 5),
                             child: TextField(
                               textAlign: TextAlign.center,
                               decoration: InputDecoration(
@@ -144,7 +144,7 @@ class MyCoursesPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 0,
+                          height: 20,
                         ),
                         Row(
                           children: [
@@ -189,7 +189,7 @@ class MyCoursesPage extends StatelessWidget {
                                       child: Row(
                                         children: [
                                           Text(
-                                            '   Computing Project \n',
+                                            '   Web Development \n',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 22,
