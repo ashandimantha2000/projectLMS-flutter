@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_lms/lecturerView/homeLecturer.dart';
-import 'package:project_lms/Lecturer/lecturer.dart';
-import 'package:project_lms/navigation/courses.dart';
+import 'package:project_lms/lecturerView/accountLecturer.dart';
 import 'package:project_lms/navigation/notifications.dart';
 import 'package:project_lms/lecturerView/coursesLecturer.dart';
 import 'package:project_lms/main.dart';
-import 'package:project_lms/signin.dart';
+
 
 
 
@@ -22,7 +21,7 @@ class LecHomePageState extends State<LecHomePage> {
     {"screen": const LecturerHome(), "title": "Home"},
     {"screen": const MyCoursesPage(), "title": "Courses"},
     {"screen": const Notifications(), "title": "Notifications"},
-    {"screen": Lecturer(), "title": "Account"}
+    {"screen":  LecAccount(), "title": "Account"}
   ];
 
 

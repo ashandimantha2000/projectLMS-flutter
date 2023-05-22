@@ -6,13 +6,13 @@ import '../My_Courses/results.dart';
 import '../signin.dart';
 
 
-class Account extends StatefulWidget {
+class LecAccount extends StatefulWidget {
   @override
-  _AccountPageState createState() => _AccountPageState();
+  _LecAccountPageState createState() => _LecAccountPageState();
 }
 
 
-class _AccountPageState extends State<Account> {
+class _LecAccountPageState extends State<LecAccount> {
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _AccountPageState extends State<Account> {
                             Row(
                               children: [
                                 Text(
-                                  "Student ",
+                                  "Staff ",
                                   textAlign: TextAlign.left,
                                   style: const TextStyle(
                                       color: Colors.white,
@@ -121,7 +121,7 @@ class _AccountPageState extends State<Account> {
                       children: [
                         CircleAvatar(
                           backgroundImage:
-                          AssetImage('assets/images/programmer (1).png'),
+                          AssetImage('assets/images/lecturer.png'),
                           radius: 40,
                         ),
                         SizedBox(
@@ -131,7 +131,7 @@ class _AccountPageState extends State<Account> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "John Nell",
+                              "Emma Charlotte",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 25,
@@ -139,7 +139,7 @@ class _AccountPageState extends State<Account> {
                                   fontWeight: FontWeight.bold),
                             ),
                             Text(
-                              "PLY 282023112",
+                              "PLY 19670093",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 16,
@@ -171,7 +171,7 @@ class _AccountPageState extends State<Account> {
                               height: 20,
                             ),
                             Text(
-                              "Batch:          ",
+                              "Position:          ",
                               style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: 'Poppins',
@@ -181,7 +181,7 @@ class _AccountPageState extends State<Account> {
                               height: 20,
                             ),
                             Text(
-                              "Degree:          \n",
+                              "Qualifications:          \n",
                               style: TextStyle(
                                   fontSize: 16,
                                   fontFamily: 'Poppins',
@@ -226,7 +226,7 @@ class _AccountPageState extends State<Account> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "John Nell Dias",
+                              "Emma Charlotte",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
@@ -236,7 +236,7 @@ class _AccountPageState extends State<Account> {
                               height: 20,
                             ),
                             Text(
-                              "21.1",
+                              "Senior Lecturer",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
@@ -246,7 +246,7 @@ class _AccountPageState extends State<Account> {
                               height: 20,
                             ),
                             Text(
-                              "BSc(hons) Bussiness \nManagement",
+                              "BSc(Hons), MBA,\n Phd (Reading)",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
@@ -266,7 +266,7 @@ class _AccountPageState extends State<Account> {
                               height: 20,
                             ),
                             Text(
-                              "hsn@students.plymouth.ac.uk",
+                              "dfsbj@plymouth.ac.lk",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
@@ -276,7 +276,7 @@ class _AccountPageState extends State<Account> {
                               height: 16,
                             ),
                             Text(
-                              "(+94)778982732",
+                              "(+94)77 898 27 32",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
@@ -286,26 +286,9 @@ class _AccountPageState extends State<Account> {
                         ),
                       ],
                     ),
+
                     SizedBox(
-                      height: 20,
-                    ),
-                    FilledButton(
-                      style: ButtonStyle(),
-                        onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Results()),
-                        ),
-                        child: Text(
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.bold,
-                            ),
-                            'View Results'
-                        ),),
-                    SizedBox(
-                      height: 10,
+                      height: 30,
                     ),
                     OutlinedButton(
 
