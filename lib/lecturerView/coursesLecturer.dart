@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_lms/main.dart';
+import 'package:project_lms/lecturerView/moduleLecturer.dart';
 
 class MyCoursesPage extends StatelessWidget {
   const MyCoursesPage({Key? key}) : super(key: key);
@@ -180,27 +181,35 @@ class MyCoursesPage extends StatelessWidget {
                                   fit: BoxFit.cover,
                                   height: 100,
                                 ),
-                                Container(
-                                  alignment: Alignment.centerLeft,
-                                  height: 80,
-                                  color: Color.fromRGBO(1, 94, 172, 1.0),
-                                  child: Expanded(
-                                    child: Center(
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            '   Web Development \n',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 22,
-                                              fontFamily: 'Raleway',
+                                FilledButton(
+                                  child: Material(
+                                    child: Container(
+                                        alignment: Alignment.centerLeft,
+                                        height: 80,
+                                        color: Colors.blue,
+                                        child: Expanded(
+                                          child: Center(
+                                            child: Row(
+                                              children: [
+                                                Text(
+                                                  'Computing Project \n',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 22,
+                                                    fontFamily: 'Raleway',
+                                                  ),
+                                                ),
+                                                Expanded(child: Container()),
+                                              ],
                                             ),
                                           ),
-                                          Expanded(child: Container()),
-                                        ],
+                                        ),
                                       ),
-                                    ),
                                   ),
+                                  onPressed: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => First_Module()),
+                                )
                                 ),
                               ],
                             ),

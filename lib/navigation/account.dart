@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_lms/header.dart';
 
-import '../My_Courses/results.dart';
+import '../Student/results.dart';
 import '../signin.dart';
 
 
