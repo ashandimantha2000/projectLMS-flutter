@@ -1,17 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:project_lms/main.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:dotted_border/dotted_border.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
+class First_Module extends StatefulWidget {
+  const First_Module({Key? key}) : super(key: key);
 
-
-class Second_Module extends StatefulWidget {
   @override
-  _Second_ModuleState createState() => _Second_ModuleState();
+  _First_ModuleState createState() => _First_ModuleState();
 }
 
+class _First_ModuleState extends State<First_Module> {
+  final List<String> _files = [];
 
-class _Second_ModuleState extends State<Second_Module> {
+  void _selectFiles() async {
+    final result = await FilePicker.platform.pickFiles(type: FileType.any);
+    if (result != null) {
+      setState(() {
+        _files.add(result.files.single.path!);
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +68,7 @@ class _Second_ModuleState extends State<Second_Module> {
                                 fontSize: 20),
                           ),
                           Text(
-                            "Manage",
+                            "Learn",
                             textAlign: TextAlign.left,
                             style: const TextStyle(
                                 color: Colors.white,
@@ -67,10 +79,6 @@ class _Second_ModuleState extends State<Second_Module> {
                         ],
                       ),
                     ],
-                  ),
-                  Image.network(
-                    'https://blog.hootsuite.com/wp-content/uploads/2020/02/Image-copyright.png',
-                    width: 80,
                   ),
                 ],
               ),
@@ -119,7 +127,7 @@ class _Second_ModuleState extends State<Second_Module> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Computing Project",
+                                "Web Application Development",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                     color: Colors.black,
@@ -229,8 +237,52 @@ class _Second_ModuleState extends State<Second_Module> {
                                 ),
                               ),
                               SizedBox(
-                                height: 30,
+                                height: 20,
                               ),
+
+                                                            //Upload
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 5),
+                                child: GestureDetector(
+                                  onTap: _selectFiles,
+                                  child: SizedBox(
+                                    width: 500,
+                                    height: 50,
+                                    child: DottedBorder(
+                                      dashPattern: const [7],
+                                      strokeWidth: 3,
+                                      color: Colors.blue,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                                        child: Center(
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children:  [
+                                              Image.asset('assets/images/upload.png', height: 24,),
+                                              SizedBox(width: 30,),
+                                              Text(
+                                                'Upload',
+                                                style: TextStyle(
+                                                  color: Colors.blueGrey,
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              SizedBox(
+                                height: 20,
+                              ),
+
+
 
                               //Box Container 02 - Coursework
                               Container(
@@ -328,8 +380,52 @@ class _Second_ModuleState extends State<Second_Module> {
                               ),
 
                               SizedBox(
-                                height: 30,
+                                height: 20,
                               ),
+
+                              //Upload
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 5),
+                                child: GestureDetector(
+                                  onTap: _selectFiles,
+                                  child: SizedBox(
+                                    width: 500,
+                                    height: 50,
+                                    child: DottedBorder(
+                                      dashPattern: const [7],
+                                      strokeWidth: 3,
+                                      color: Colors.blue,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                                        child: Center(
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children:  [
+                                              Image.asset('assets/images/upload.png', height: 24,),
+                                              SizedBox(width: 30,),
+                                              Text(
+                                                'Upload',
+                                                style: TextStyle(
+                                                  color: Colors.blueGrey,
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              SizedBox(
+                                height: 20,
+                              ),
+
+
                               //Box Container 03 - References
                               Container(
                                 width: 500,
@@ -371,7 +467,49 @@ class _Second_ModuleState extends State<Second_Module> {
                               ),
 
                               SizedBox(
-                                height: 30,
+                                height: 20,
+                              ),
+
+                              //Upload
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 5),
+                                child: GestureDetector(
+                                  onTap: _selectFiles,
+                                  child: SizedBox(
+                                    width: 500,
+                                    height: 50,
+                                    child: DottedBorder(
+                                      dashPattern: const [7],
+                                      strokeWidth: 3,
+                                      color: Colors.blue,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                                        child: Center(
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children:  [
+                                              Image.asset('assets/images/upload.png', height: 24,),
+                                              SizedBox(width: 30,),
+                                              Text(
+                                                'Upload',
+                                                style: TextStyle(
+                                                  color: Colors.blueGrey,
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              SizedBox(
+                                height: 50,
                               ),
                             ],
                           ),

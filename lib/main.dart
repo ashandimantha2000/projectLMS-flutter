@@ -9,8 +9,7 @@ import 'navigation/notifications.dart';
 import 'navigation/courses.dart';
 import 'navigation/my_courses.dart';
 import 'package:project_lms/My_Courses/Module_inside.dart';
-import 'package:project_lms/Lecturer/lecturer.dart';
-import 'package:project_lms/My_Courses/results.dart';
+import 'package:project_lms/Student/results.dart';
 
 
 //Colours
