@@ -127,7 +127,7 @@ class _First_ModuleState extends State<First_Module> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Web Application Development",
+                                "Computing Project",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                     color: Colors.black,

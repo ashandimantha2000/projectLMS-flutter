@@ -1,14 +1,6 @@
 //main file
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'nav.dart';
-import 'signin.dart';
-import 'package:project_lms/api_connector/signin_api.dart';
-import 'navigation/home.dart';
-import 'navigation/notifications.dart';
-import 'navigation/courses.dart';
-import 'navigation/my_courses.dart';
-import 'package:project_lms/My_Courses/Module_inside.dart';
+import 'package:project_lms/splashScreens/Welcome_page.dart';
 import 'package:project_lms/Student/results.dart';
 
 
@@ -27,8 +19,8 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: 'Discoid LMS',
 
-      home: LoginPage(),
-      //HomePage or LoginPage
+      home: Welcome_Page(),
+      //HomePage or LoginPage or Welcome_Page
 
     ),
   );
