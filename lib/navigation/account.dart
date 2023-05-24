@@ -246,7 +246,7 @@ class _AccountPageState extends State<Account> {
                               height: 20,
                             ),
                             Text(
-                              "BSc(hons) Bussiness \nManagement",
+                              "BSc(Hons) Bussiness \nManagement",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',

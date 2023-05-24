@@ -119,7 +119,7 @@ class _Second_ModuleState extends State<Second_Module> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Computing Project",
+                                "Web Development",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                     color: Colors.black,
