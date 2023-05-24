@@ -138,18 +138,18 @@ class Notifications extends StatelessWidget {
               height: 10,
             ),
             _itemChats(
-              avatar: 'assets/images/Avatar.png',
-              name: 'Maxwell',
+              avatar: 'assets/images/notification.png',
+              name: 'Assignment 03',
               chat:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor sed ',
               time: 'Yesterday',
             ),
             _itemChats(
-              avatar: 'assets/images/Avatar.png',
-              name: 'Smith',
+              avatar: 'assets/images/notification.png',
+              name: 'Presentation Reminder',
               chat:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor sed ',
-              time: '2023.02.01',
+              time: '2023.05.18',
             ),
           ],
         ),
