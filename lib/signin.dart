@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
     dynamic userEmail=emailController.text;
     dynamic userPass =passController.text;
 
-    if(userEmail=='admin@plymouth.uk' && userPass=='admin@Plymouth123')
+    if(userEmail=='admin@plymouth.uk' && userPass=='admin@P123')
     {
       if(selectedValue=='Student')
       {
