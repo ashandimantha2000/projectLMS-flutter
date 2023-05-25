@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:project_lms/lecturerView/uploadedFile.dart';
 import 'package:project_lms/main.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:file_picker/file_picker.dart';
-import 'deletedLecturer.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-String tempDel ='20';
-class First_Module extends StatefulWidget {
-  const First_Module({Key? key}) : super(key: key);
+dynamic temp=0;
+
+
+class Delete_Module extends StatefulWidget {
+  const Delete_Module({Key? key}) : super(key: key);
 
   @override
-  _First_ModuleState createState() => _First_ModuleState();
+  _Delete_ModuleState createState() => _Delete_ModuleState();
 }
 
-class _First_ModuleState extends State<First_Module> {
+class _Delete_ModuleState extends State<Delete_Module> {
   final List<String> _files = [];
 
   void _selectFiles() async {
@@ -21,6 +25,14 @@ class _First_ModuleState extends State<First_Module> {
     if (result != null) {
       setState(() {
         _files.add(result.files.single.path!);
+        Fluttertoast.showToast(msg: "Presentation1 Uploaded Successfully");
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+
+              builder: (context) => Upload_Module()),
+
+        );
       });
     }
   }
@@ -141,7 +153,7 @@ class _First_ModuleState extends State<First_Module> {
                               //Box Container 01 - Lecture Materials
                               Container(
                                 width: 500,
-                                height: 261,
+                                height: 230,
                                 decoration: BoxDecoration(
                                   color: const Color.fromRGBO(232, 232, 232, 100),
                                   border: Border.all(
@@ -215,42 +227,7 @@ class _First_ModuleState extends State<First_Module> {
                                           ),
                                         ],
                                       ),
-                                      Row(
-                                        children: [
-                                          Image.asset('assets/images/microsoft-powerpoint.png',
-                                            height: 40,
-                                          ),
-                                          Text(
-                                            'Lecture 03',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 19,
-                                              fontFamily: 'Raleway',
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 165,
-                                          ),
-                                          InkWell(
-                                            onTap: () {
-                                             if(tempDel=='20'){
-                                               Fluttertoast.showToast(msg: "Lecture 3 Deleted Succesfully");
-                                               Navigator.push(
-                                                 context,
-                                                 MaterialPageRoute(
 
-                                                     builder: (context) => Delete_Module()),
-
-                                               );
-                                             };
-
-                                            },
-                                            child: Image.asset('assets/images/delete.png',
-                                              height: 25,
-                                            ),
-                                          )
-                                        ],
-                                      ),
                                       Row(
                                         children: [
                                           Image.asset('assets/images/microsoft-powerpoint.png',
@@ -280,11 +257,13 @@ class _First_ModuleState extends State<First_Module> {
                                 height: 20,
                               ),
 
-                                                            //Upload
+                              //Upload
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 5),
                                 child: GestureDetector(
-                                  onTap: _selectFiles,
+                                  onTap:
+                                  _selectFiles,
+
                                   child: SizedBox(
                                     width: 500,
                                     height: 50,
