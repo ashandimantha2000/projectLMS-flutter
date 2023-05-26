@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_lms/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+var down = 'new';
 
+void _downloadFiles() async {
+  if (down=='new') {
+    Fluttertoast.showToast(msg: "Lecture 01 Downloading...");
+    Fluttertoast.showToast(msg: "Lecture 01 Downloaded Successfully");
+
+  }
+}
 
 
 class Second_Module extends StatefulWidget {
@@ -164,20 +173,23 @@ class _Second_ModuleState extends State<Second_Module> {
                                               height: 11 )
                                         ],
                                       ),
-                                      Row(
-                                        children: [
-                                          Image.asset('assets/images/microsoft-powerpoint.png',
-                                            height: 40,
-                                          ),
-                                          Text(
-                                            'Lecture 01',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 19,
-                                              fontFamily: 'Raleway',
+                                      InkWell(
+                                        onTap: _downloadFiles,
+                                        child: Row(
+                                          children: [
+                                            Image.asset('assets/images/microsoft-powerpoint.png',
+                                              height: 40,
                                             ),
-                                          )
-                                        ],
+                                            Text(
+                                              'Lecture 01',
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 19,
+                                                fontFamily: 'Raleway',
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                       Row(
                                         children: [
